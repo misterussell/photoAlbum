@@ -2,6 +2,7 @@ var albums = [
   {
     albumName: 'surfers',
     albumURL: 'images/albumOne',
+    previewImage: 'images/albumOne/ocean1.jpeg',
     albumDescription: 'Images from the seaside.',
     albumImages: [
       {
@@ -27,6 +28,7 @@ var albums = [
   },{
       albumName: 'mountainViews',
       albumURL: 'images/albumTwo',
+      previewImage: 'images/albumTwo/Lake1.jpeg',
       albumDescription: 'Images from the mountains.',
       albumImages: [
         {

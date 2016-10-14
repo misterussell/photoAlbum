@@ -1,8 +1,37 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
 body {
+  width: 100%;
   font-size: 62.5%;
-  font-family: "Adobe Caslon Pro", Georgia, serif; }
+  font-family: "Adobe Caslon Pro", Georgia, serif;
+  margin: 0 auto;
+  text-align: center; }
 
 img {
   max-width: 100%; }
+
+main {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  main::after {
+    clear: both;
+    content: "";
+    display: block; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto; }
+
+.sideMenu {
+  display: none; }
+
+.pageHeader {
+  background: teal; }
 
 /*# sourceMappingURL=main.css.map */
