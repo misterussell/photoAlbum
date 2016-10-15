@@ -1,5 +1,9 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
+@import "var-and-mixins";
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
 @import "baseline";
 @import "nav";
 @import "header";
+@import "content-block";
+@import "footer";

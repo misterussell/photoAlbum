@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,700");
 html {
   box-sizing: border-box; }
 
@@ -7,31 +8,66 @@ html {
 body {
   width: 100%;
   font-size: 62.5%;
-  font-family: "Adobe Caslon Pro", Georgia, serif;
+  font-family: 'Ubuntu', Georgia, sans-serif;
   margin: 0 auto;
-  text-align: center; }
-
-img {
-  max-width: 100%; }
-
-main {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto; }
-  main::after {
-    clear: both;
-    content: "";
-    display: block; }
+  text-align: center;
+  color: #1C053A; }
 
 ul {
   list-style: none;
   padding: 0;
   margin: 0 auto; }
 
+img {
+  max-width: 100%; }
+
+a {
+  text-decoration: none;
+  color: #1C053A; }
+
 .sideMenu {
   display: none; }
 
 .pageHeader {
-  background: teal; }
+  background: #6B949E;
+  color: #1C053A;
+  padding: 1rem 0;
+  font-size: 2rem;
+  font-weight: 700; }
+
+.selectedContent {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 2rem; }
+  .selectedContent::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .selectedContent a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    .selectedContent a:last-child {
+      margin-right: 0; }
+    .selectedContent a:nth-child(3n) {
+      margin-right: 0; }
+    .selectedContent a:nth-child(3n+1) {
+      clear: left; }
+  .selectedContent li {
+    margin-bottom: 1.5rem;
+    border: solid #321456 0.1rem; }
+    .selectedContent li img {
+      border-bottom: solid #321456 0.1rem; }
+  .selectedContent h2 {
+    margin: 0;
+    height: 2.75rem;
+    padding: .5rem;
+    font-size: .75rem; }
+
+footer {
+  background: #6B949E;
+  padding: .5rem 0; }
 
 /*# sourceMappingURL=main.css.map */

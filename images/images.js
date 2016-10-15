@@ -2,71 +2,164 @@ var albums = [
   {
     albumName: 'surfers',
     albumURL: 'images/albumOne',
-    previewImage: 'images/albumOne/ocean1.jpeg',
+    previewImage: 'images/albumOne/ocean2.jpeg',
     albumDescription: 'Images from the seaside.',
+    hashLocation: '#surferAlbum',
     albumImages: [
       {
         imageName: 'Torrenting Ocean',
-        imageURL: 'images/albumOne/ocean1.jpg',
+        imageURL: 'images/albumOne/ocean1.jpeg',
       },{
         imageName: 'Plumetting Wave',
-        imageURL: 'images/albumOne/ocean2.jpg',
+        imageURL: 'images/albumOne/ocean2.jpeg',
       },{
         imageName: 'Palm Reflection',
-        imageURL: 'images/albumOne/ocean3.jpg',
+        imageURL: 'images/albumOne/ocean3.jpeg',
       },{
         imageName: 'Helicopter Flight',
-        imageURL: 'images/albumOne/ocean4.jpg',
+        imageURL: 'images/albumOne/ocean4.jpeg',
       },{
         imageName: 'Board Fin',
-        imageURL: 'images/albumOne/surfer1.jpg',
+        imageURL: 'images/albumOne/surfer1.jpeg',
       },{
         imageName: 'In the Tube',
-        imageURL: 'images/albumOne/surfer2.jpg',
+        imageURL: 'images/albumOne/surfer2.jpeg',
       }
     ],
   },{
-      albumName: 'mountainViews',
-      albumURL: 'images/albumTwo',
-      previewImage: 'images/albumTwo/Lake1.jpeg',
-      albumDescription: 'Images from the mountains.',
-      albumImages: [
-        {
-          imageName: 'Misty Valley',
-          imageURL: 'images/albumTwo/Lake1.jpg',
-        },{
-          imageName: 'Stepe Mountain',
-          imageURL: 'images/albumTwo/mountain1.jpg',
-        },{
-          imageName: 'Snowy Mountaintop',
-          imageURL: 'images/albumTwo/mountain2.jpg',
-        },{
-          imageName: 'Desert Mountains',
-          imageURL: 'images/albumTwo/mountain3.jpg',
-        },{
-          imageName: 'Snowy Tree',
-          imageURL: 'images/albumTwo/mountain4.jpg',
-        },{
-          imageName: 'Sunset',
-          imageURL: 'images/albumTwo/mountain5.jpg',
-        }
-      ],
-    },
+    albumName: 'mountainViews',
+    albumURL: 'images/albumTwo',
+    previewImage: 'images/albumTwo/Lake1.jpeg',
+    albumDescription: 'Images from the mountains.',
+    hashLocation: '#mountainAlbum',
+    albumImages: [
+      {
+        imageName: 'Misty Valley',
+        imageURL: 'images/albumTwo/Lake1.jpeg',
+      },{
+        imageName: 'Stepe Mountain',
+        imageURL: 'images/albumTwo/mountain1.jpeg',
+      },{
+        imageName: 'Snowy Mountaintop',
+        imageURL: 'images/albumTwo/mountain2.jpeg',
+      },{
+        imageName: 'Desert Mountains',
+        imageURL: 'images/albumTwo/mountain3.jpeg',
+      },{
+        imageName: 'Snowy Tree',
+        imageURL: 'images/albumTwo/mountain4.jpeg',
+      },{
+        imageName: 'Sunset',
+        imageURL: 'images/albumTwo/mountain5.jpeg',
+      }
+    ],
+  },{
+    albumName: 'deepSea',
+    albumURL: 'images/albumThree',
+    previewImage: 'images/albumThree/jellyfish1.jpeg',
+    albumDescription: 'Images from the sea.',
+    hashLocation: '#seaAlbum',
+    albumImages: [
+      {
+        imageName: 'Sunning Jellyfish',
+        imageURL: 'images/albumThree/jellyfish1.jpeg',
+      },{
+        imageName: 'Reef School',
+        imageURL: 'images/albumThree/school1.jpeg',
+      },{
+        imageName: 'Snowy Mountaintop',
+        imageURL: 'images/albumThree/school2.jpeg',
+      },{
+        imageName: 'Desert Mountains',
+        imageURL: 'images/albumThree/sharks.jpeg',
+      },{
+        imageName: 'Snowy Tree',
+        imageURL: 'images/albumThree/sharks2.jpeg',
+      },{
+        imageName: 'Sunset',
+        imageURL: 'images/albumThree/turtle2.jpeg',
+      }
+    ],
+  },{
+    albumName: 'valleys',
+    albumURL: 'images/albumFour',
+    previewImage: 'images/albumFour/valley1.jpeg',
+    albumDescription: 'Images from the valleys of the world.',
+    hashLocation: '#valleyAlbum',
+    albumImages: [
+      {
+        imageName: 'Night Sky',
+        imageURL: 'images/albumFour/space1.jpeg',
+      },{
+        imageName: 'Valley Hills',
+        imageURL: 'images/albumFour/valley1.jpeg',
+      },{
+        imageName: 'Sunset',
+        imageURL: 'images/albumFour/valley2.jpeg',
+      },{
+        imageName: 'River Valley',
+        imageURL: 'images/albumFour/valley3.jpeg',
+      },{
+        imageName: 'Valley Town',
+        imageURL: 'images/albumFour/valley4.jpeg',
+      },{
+        imageName: 'Windfarm',
+        imageURL: 'images/albumFour/winfarm1.jpeg',
+      }
+    ],
+  },{
+    albumName: 'insects',
+    albumURL: 'images/albumFive',
+    previewImage: 'images/albumFive/grasshopper1.jpeg',
+    albumDescription: 'Images of Earths smaller creatures.',
+    hashLocation: '#insectAlbum',
+    albumImages: [
+      {
+        imageName: 'Torrenting Ocean',
+        imageURL: 'images/albumFive/bee1.jpeg',
+      },{
+        imageName: 'Plumetting Wave',
+        imageURL: 'images/albumFive/dragonfly1.jpeg',
+      },{
+        imageName: 'Palm Reflection',
+        imageURL: 'images/albumFive/ladybug1.jpeg',
+      },{
+        imageName: 'Helicopter Flight',
+        imageURL: 'images/albumFive/snail1.jpeg',
+      },{
+        imageName: 'Board Fin',
+        imageURL: 'images/albumFive/spider1.jpeg',
+      },{
+        imageName: 'In the Tube',
+        imageURL: 'images/albumFive/grasshopper1.jpeg',
+      }
+    ],
+  },{
+    albumName: 'elephants',
+    albumURL: 'images/albumSix',
+    previewImage: 'images/albumSix/elephant1.jpeg',
+    albumDescription: 'Images of Earths larger creatures.',
+    hashLocation: '#elephantAlbum',
+    albumImages: [
+      {
+        imageName: 'Torrenting Ocean',
+        imageURL: 'images/albumSix/elephant1.jpeg',
+      },{
+        imageName: 'Plumetting Wave',
+        imageURL: 'images/albumSix/elephant2.jpeg',
+      },{
+        imageName: 'Palm Reflection',
+        imageURL: 'images/albumSix/elephant3.jpeg',
+      },{
+        imageName: 'Helicopter Flight',
+        imageURL: 'images/albumSix/elephant4.jpeg',
+      },{
+        imageName: 'Board Fin',
+        imageURL: 'images/albumSix/elephant5.jpeg',
+      },{
+        imageName: 'In the Tube',
+        imageURL: 'images/albumSix/elephant6.jpeg',
+      }
+    ],
+  }
 ];
-
-  // , {
-  //   albumName: 'mountains',
-  //   albumURL: 'images/albumTwo',
-  //   albumDescription: 'Images from the mountains.'
-  //
-  // }, {
-  //   albumName: 'ocean',
-  //   albumURL: 'images/albumThree',
-  //   albumDescription: 'Images from the deep sea.'
-  //
-  // }, {
-  //   albumName: 'valleys',
-  //   albumURL: '/images/albumFour',
-  //   albumDescription: 'Images from the valleys of the world.'
-  // }
-// ];
