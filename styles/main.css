@@ -26,13 +26,18 @@ a {
   color: #1C053A; }
 
 .sideMenu {
-  display: none; }
+  display: none;
+  float: left;
+  width: 50px;
+  height: 50vw;
+  background: #6B4E90; }
 
 .pageHeader {
   background: #6B949E;
   color: white;
-  padding: 1rem 0;
-  font-size: 2rem;
+  padding: .25rem 0;
+  margin: 0;
+  font-size: 1rem;
   font-weight: 700; }
 
 .selectedContent {
