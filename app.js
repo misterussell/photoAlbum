@@ -27,16 +27,19 @@ function renderHome(pageHeader, contentBox) {
 function renderAlbum(sideMenu, pageHeader, contentBox, album) {
   //STORAGE for passed in album data
   var selectedAlbum = album;
+  
   //CAPITALIZE first letter of string
   function capFirst(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
+
   //PRINT new title
   var selectedAlbumTitle = $('<h1>Album: ' + capFirst(selectedAlbum) + '</h1>');
 
   //INSERT title into header
   pageHeader.append(selectedAlbumTitle);
   // console.log(albums); // PROOF
+
   //RETRIEVE a specific album
   function getAlbum(album, i, arr) {
     return album.albumName === selectedAlbum;
@@ -48,7 +51,7 @@ function renderAlbum(sideMenu, pageHeader, contentBox, album) {
   var allImages = selectAlbum[0].albumImages;
   // console.log(allImages); PROOF to find images
 
-  // extrapolates image data from the selected array position above
+  // EXTRAPOLATES image data from the selected array position above
   allImages.forEach(function(image, i, arr) {
     $gridItem = $('<a href="' + image.imageHash + '"><li><img src="' + image.imageURL + '" /img><h2>' + image.imageName + '</h2></li></a>');
     contentBox.append($gridItem);
@@ -73,10 +76,6 @@ renderAlbum(sideMenu, pageHeader, contentBox, album);
 $a.on('click', function() {
 
 });
-
-// renderHome(pageHeader, contentBox);
-// renderAlbum(sideMenu, pageHeader, contentBox, album);
-// renderImage(pageHeader, contentBox);
 
 
 
