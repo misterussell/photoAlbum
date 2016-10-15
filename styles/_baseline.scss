@@ -5,10 +5,7 @@ body {
   margin: 0 auto;
   text-align: center;
   color: $color-primary-4;
-}
-
-main {
-  // @include outer-container;
+  box-sizing: border-box;
 }
 
 ul {

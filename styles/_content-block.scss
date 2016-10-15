@@ -1,32 +1,35 @@
 .allContent {
+  display: inline-block;
 
-}
+  .selectedContent {
+    @include outer-container;
+    margin: 2rem;
+    display: inline-block;
+    float: left;
 
-.selectedContent {
-  @include outer-container;
-  margin: 2rem;
-
-  a {
-    @include span-columns(4);
-    @include omega(3n);
-  }
-
-  li {
-    // @include span-columns(4);
-    // @include omega(3n);
-    margin-bottom: 1.5rem;
-    border: solid $color-primary-3 .1rem;
-
-    img {
-      border-bottom: solid $color-primary-3 .1rem;
+    a {
+      @include span-columns(4);
+      @include omega(3n);
     }
-  }
 
-  h2 {
-    margin: 0;
-    height: 2.75rem;
-    padding: .5rem;
-    font-size: .75rem;
+    li {
+      // @include span-columns(4);
+      // @include omega(3n);
+      margin-bottom: 1.5rem;
+      border: solid $color-primary-3 .1rem;
+
+      img {
+        border-bottom: solid $color-primary-3 .1rem;
+      }
+    }
+
+    h2 {
+      margin: 0;
+      height: 2.75rem;
+      padding: .5rem;
+      font-size: .75rem;
+    }
+
   }
 
 }

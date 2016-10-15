@@ -1,6 +1,7 @@
 var sideMenu = $('.sideMenu');
 var pageHeader = $('.pageHeader');
 var contentBox = $('.selectedContent');
+var mainContainer = $('.allContent');
 var windowLocation = window.location.hash;
 var $a = $('a');
 var album = 'surfers';
@@ -24,14 +25,14 @@ function renderHome(pageHeader, contentBox) {
 
 }
 
-function renderAlbum(sideMenu, pageHeader, contentBox, album) {
+//CAPITALIZE first letter of string
+function capFirst(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function renderAlbum(sideMenu, pageHeader, mainContainer, contentBox, album) {
   //STORAGE for passed in album data
   var selectedAlbum = album;
-  
-  //CAPITALIZE first letter of string
-  function capFirst(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  }
 
   //PRINT new title
   var selectedAlbumTitle = $('<h1>Album: ' + capFirst(selectedAlbum) + '</h1>');
@@ -55,11 +56,11 @@ function renderAlbum(sideMenu, pageHeader, contentBox, album) {
   allImages.forEach(function(image, i, arr) {
     $gridItem = $('<a href="' + image.imageHash + '"><li><img src="' + image.imageURL + '" /img><h2>' + image.imageName + '</h2></li></a>');
     contentBox.append($gridItem);
-
   });
 
-  //SIDE MENU HANNDLER
-  // $('.sideMenu').css('display', 'block');
+  //SIDE MENU HANDLER
+  sideMenu.css('display', 'inline-block');
+  mainContainer.css('width', '85%');
 }
 
 function renderImage(pageHeader, contentBox) {
@@ -69,7 +70,7 @@ function renderImage(pageHeader, contentBox) {
 }
 
 // renderHome(pageHeader, contentBox);
-renderAlbum(sideMenu, pageHeader, contentBox, album);
+renderAlbum(sideMenu, pageHeader, mainContainer, contentBox, album);
 // renderImage(pageHeader, contentBox);
 
 
