@@ -9,21 +9,27 @@ var albums = [
       {
         imageName: 'Torrenting Ocean',
         imageURL: 'images/albumOne/ocean1.jpeg',
+        imageHash: '#surferAlbum%ocean1',
       },{
         imageName: 'Plumetting Wave',
         imageURL: 'images/albumOne/ocean2.jpeg',
+        imageHash: '#surferAlbum%ocean2',
       },{
         imageName: 'Palm Reflection',
         imageURL: 'images/albumOne/ocean3.jpeg',
+        imageHash: '#surferAlbum%ocean3',
       },{
         imageName: 'Helicopter Flight',
         imageURL: 'images/albumOne/ocean4.jpeg',
+        imageHash: '#surferAlbum%ocean4',
       },{
         imageName: 'Board Fin',
         imageURL: 'images/albumOne/surfer1.jpeg',
+        imageHash: '#surferAlbum%ocean5',
       },{
         imageName: 'In the Tube',
         imageURL: 'images/albumOne/surfer2.jpeg',
+        imageHash: '#surferAlbum%ocean6',
       }
     ],
   },{
@@ -36,21 +42,27 @@ var albums = [
       {
         imageName: 'Misty Valley',
         imageURL: 'images/albumTwo/Lake1.jpeg',
+        imageHash: '%mountain1',
       },{
         imageName: 'Stepe Mountain',
         imageURL: 'images/albumTwo/mountain1.jpeg',
+        imageHash: '%mountain2',
       },{
         imageName: 'Snowy Mountaintop',
         imageURL: 'images/albumTwo/mountain2.jpeg',
+        imageHash: '%mountain3',
       },{
         imageName: 'Desert Mountains',
         imageURL: 'images/albumTwo/mountain3.jpeg',
+        imageHash: '%mountain4',
       },{
         imageName: 'Snowy Tree',
         imageURL: 'images/albumTwo/mountain4.jpeg',
+        imageHash: '%mountain5',
       },{
         imageName: 'Sunset',
         imageURL: 'images/albumTwo/mountain5.jpeg',
+        imageHash: '%mountain6',
       }
     ],
   },{
