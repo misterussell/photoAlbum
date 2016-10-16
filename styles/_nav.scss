@@ -1,8 +1,18 @@
 .sideMenu {
-  display: none;
+  box-sizing: border-box;
+  // display: none;
+  width: 0%;
   float: left;
-  width: 15%;
-  height: 50vw;
-  background: $color-secondary-1-2;
-  border-right: .5rem solid $color-secondary-1-1;
+  // width: 15%;
+  height: 80vw;
+  background: $color-primary-3;
+  // border-right: .5rem solid $color-secondary-1-1;
+  padding-top: 10vw;
+  transition: all .4s;
+
+  button {
+    width: 80%;
+    margin: 1vw;
+  }
+
 }
