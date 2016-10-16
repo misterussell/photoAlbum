@@ -18,6 +18,7 @@ function capFirst(string) {
 
 //RENDER home page content + add hash location to all album previews
 function renderHome(pageHeader, contentBox) {
+  contentBox.empty();
   //change the location hash
   //
   //CHANGE the header text
@@ -33,6 +34,10 @@ function renderHome(pageHeader, contentBox) {
 
 //RENDER album page content for the passed in album info
 function renderAlbum(sideMenu, pageHeader, mainContainer, contentBox, album) {
+  sideMenu.empty();
+  pageHeader.empty();
+  contentBox.empty();
+
   //STORAGE for passed in album data
   var selectedAlbum = album;
 
@@ -88,8 +93,8 @@ $a.on('click', function(e){
 	e.preventDefault();
 });
 
-// CAPTURES albumname from hash location
-var album = windowLocation.slice(1);
+// CAPTURES albumname from hash location (used only for testing)
+// var album = windowLocation.slice(1);
 
 //PROOF of page renderings
 // renderHome(pageHeader, contentBox);
@@ -99,10 +104,11 @@ var album = windowLocation.slice(1);
 // SET default page view + watch new traffic with specific hash to render that content
 if (windowLocation === '') {
     renderHome(pageHeader, contentBox);
-} else if (windowLocation.indexOf('%') === -1) {
-  var album = windowLocation.slice(1);
-  renderAlbum(sideMenu, pageHeader, mainContainer, contentBox, album);
 }
+// } else if (windowLocation.indexOf('%') === -1) {
+//   var album = windowLocation.slice(1);
+//   renderAlbum(sideMenu, pageHeader, mainContainer, contentBox, album);
+// }
 
 //watch location hash for changes and render new content
 $window.on('hashchange', function(e){
