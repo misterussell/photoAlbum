@@ -48,14 +48,14 @@ a {
   border-bottom: 0.5rem solid #1A0669; }
 
 .allContent {
-  display: inline-block; }
+  display: inline-block;
+  float: left; }
   .allContent .selectedContent {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     margin: 2rem;
-    display: inline-block;
-    float: left; }
+    display: inline-block; }
     .allContent .selectedContent::after {
       clear: both;
       content: "";

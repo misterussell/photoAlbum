@@ -35,6 +35,8 @@ function renderHome(pageHeader, contentBox) {
 
 //RENDER album page content for the passed in album info
 function renderAlbum(sideMenu, pageHeader, mainContainer, contentBox, album) {
+  console.dir(window.location);
+
   //CLEAR contents for new data
   sideMenu.empty();
   pageHeader.empty();
@@ -42,7 +44,7 @@ function renderAlbum(sideMenu, pageHeader, mainContainer, contentBox, album) {
 
   //STORAGE for passed in album data
   var selectedAlbum = album;
-
+  // console.log(selectedAlbum + ' is location from Render Album');
   //PRINT new title
   var selectedAlbumTitle = $('<h1>Album: ' + capFirst(selectedAlbum) + '</h1>');
 
@@ -63,7 +65,7 @@ function renderAlbum(sideMenu, pageHeader, mainContainer, contentBox, album) {
 
   // EXTRAPOLATES image data from the selected array position above
   allImages.forEach(function(image, i, arr) {
-    $gridItem = $('<a href="' + windowLocation + image.imageHash + '"><li><img src="' + image.imageURL + '" /img><h2>' + image.imageName + '</h2></li></a>');
+    $gridItem = $('<a href="#' + album + image.imageHash + '"><li><img src="' + image.imageURL + '" /img><h2>' + image.imageName + '</h2></li></a>');
     contentBox.append($gridItem);
   });
 
@@ -83,20 +85,22 @@ function renderAlbum(sideMenu, pageHeader, mainContainer, contentBox, album) {
 //RENDER a specific image to the image only page
 //will require a a back button in the header
 function renderImage(pageHeader, contentBox, currentLocation) {
+  console.dir(window.location);
   //CLEAR contents for new data
   pageHeader.empty();
   contentBox.empty();
 
   //STORAGE for passed in album data
   var location = currentLocation;
+  // console.log(location + ' is location from Render Image');
 
   //RETRIEVE the
   var selectedAlbum = location.split('%')[0];
-  console.log(selectedAlbum);
+  // console.log(selectedAlbum);
 
   //RETREIVE the image to reference from the hash
   var selectedImage = '%' + location.split('%')[1];
-  console.log(selectedImage);
+  // console.log(selectedImage);
 
   //RETRIEVE a specific album
   function getAlbum(album, i, arr) {
@@ -118,9 +122,9 @@ function renderImage(pageHeader, contentBox, currentLocation) {
 
   var showImage = allImages.filter(getImage)[0];
   //PROOF image found
-  console.log(showImage);
+  // console.log(showImage);
 
-  console.log(showImage.imageName);
+  // console.log(showImage.imageName);
 
   //PRINT new title
   var selectedImageTitle = $('<h1>' + showImage.imageName + '</h1>');
@@ -132,7 +136,7 @@ function renderImage(pageHeader, contentBox, currentLocation) {
 
   contentBox.append($insertImage);
 
-  $('body').css('background', '#6B949E');
+  // $('body').css('background', '#6B949E');
 }
 
 //REMOVE default behavior from links
@@ -140,39 +144,43 @@ $a.on('click', function(e){
 	e.preventDefault();
 });
 
-
 //
-
 
 //CLICK handling and testing below
 //CAPTURES albumname from hash location (used only for testing)
-var album = windowLocation.slice(1);
+// var album = windowLocation.slice(1);
 
 //PROOF of page renderings
 // renderHome(pageHeader, contentBox);
 // renderAlbum(sideMenu, pageHeader, mainContainer, contentBox, album);
-renderImage(pageHeader, contentBox, album);
+// renderImage(pageHeader, contentBox, album);
 
-// SET default page view + watch new traffic with specific hash to render that content
-// if (windowLocation === '') {
-//     renderHome(pageHeader, contentBox);
-// }
-// } else if (windowLocation.indexOf('%') === -1) {
-//   var album = windowLocation.slice(1);
-//   renderAlbum(sideMenu, pageHeader, mainContainer, contentBox, album);
-// }
+//SET default page view + watch new traffic with specific hash to render that content
+if (windowLocation === '' || windowLocation === '#') {
+    renderHome(pageHeader, contentBox);
+} else if (windowLocation.indexOf('%') === -1) {
+  var album = windowLocation.slice(1);
+  renderAlbum(sideMenu, pageHeader, mainContainer, contentBox, album);
+} else if (windowLocation.indexOf('%') !== -1) {
+  var album = windowLocation.slice(1);
+  renderImage(pageHeader, contentBox, album);
+}
 
-//watch location hash for changes and render new content
+//WATCH location hash for changes and render new content
 $window.on('hashchange', function(e){
-  alert('help!');
+  // alert('hash change');
   console.log('changed');
   var album = e.target.location.hash.slice(1);
   console.log(album);
-  if(album.indexOf('%') === -1) {
-    console.log('test');
+  if (album === '') {
+    renderHome(pageHeader, contentBox);
+  } else if (album.indexOf('%') === -1) {
+    console.log(album);
+    // console.log('test');
     renderAlbum(sideMenu, pageHeader, mainContainer, contentBox, album);
-  } else if (album.indexOf('%') === 1) {
-    console.log('retrieved album');
+  } else if (album.indexOf('%') !== -1) {
+    console.log(album);
+    // console.log('retrieved album');
     renderImage(pageHeader, contentBox, album);
   }
 });

@@ -1,11 +1,11 @@
 .allContent {
   display: inline-block;
+  float:left;
 
   .selectedContent {
     @include outer-container;
     margin: 2rem;
     display: inline-block;
-    float: left;
 
     a {
       @include span-columns(4);
