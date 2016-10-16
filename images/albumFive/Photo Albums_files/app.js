@@ -27,14 +27,15 @@ function renderHome(pageHeader, contentBox) {
     var $gridItem = $('<a href="#' + album.albumName + '"><li class="' + album.albumName + '"><img src="' + album.previewImage + '" /img><h2>' + album.albumDescription + '</h2></li></a>');
     contentBox.append($gridItem);
   });
-  // console.log(albums);
+  console.log(albums);
 
 }
 
 //RENDER album page content for the passed in album info
 function renderAlbum(sideMenu, pageHeader, mainContainer, contentBox, album) {
   //STORAGE for passed in album data
-  var selectedAlbum = album;
+  var selectedAlbum = windowLocation.slice(1);
+  // var selectedAlbum = album;
 
   //PRINT new title
   var selectedAlbumTitle = $('<h1>Album: ' + capFirst(selectedAlbum) + '</h1>');
@@ -94,9 +95,6 @@ $a.on('click', function(e){
 // SET default page view
 if (windowLocation === '') {
     renderHome(pageHeader, contentBox);
-} else if (windowLocation.indexOf('%') === -1) {
-  var album = windowLocation.slice(1);
-  renderAlbum(sideMenu, pageHeader, mainContainer, contentBox, album);
 }
 
 $window.on('hashchange', function(e){

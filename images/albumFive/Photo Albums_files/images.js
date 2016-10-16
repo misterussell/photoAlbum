@@ -81,19 +81,19 @@ var albums = [
         imageURL: 'images/albumThree/school1.jpeg',
         imageHash: '%sea2',
       },{
-        imageName: 'Silver School',
+        imageName: 'Snowy Mountaintop',
         imageURL: 'images/albumThree/school2.jpeg',
         imageHash: '%sea3',
       },{
-        imageName: 'Wandering Frenzy',
+        imageName: 'Desert Mountains',
         imageURL: 'images/albumThree/sharks.jpeg',
         imageHash: '%sea4',
       },{
-        imageName: 'Night Hunter',
+        imageName: 'Snowy Tree',
         imageURL: 'images/albumThree/sharks2.jpeg',
         imageHash: '%sea5',
       },{
-        imageName: 'Old Eyes',
+        imageName: 'Sunset',
         imageURL: 'images/albumThree/turtle2.jpeg',
         imageHash: '%sea6',
       }
@@ -139,27 +139,27 @@ var albums = [
     hashLocation: '#insectAlbum',
     albumImages: [
       {
-        imageName: 'Perched Bee',
+        imageName: 'Torrenting Ocean',
         imageURL: 'images/albumFive/bee1.jpeg',
         imageHash: '%insect1',
       },{
-        imageName: 'Perched Dragonfly',
+        imageName: 'Plumetting Wave',
         imageURL: 'images/albumFive/dragonfly1.jpeg',
         imageHash: '%insect2',
       },{
-        imageName: 'Traveling Ladybug',
+        imageName: 'Palm Reflection',
         imageURL: 'images/albumFive/ladybug1.jpeg',
         imageHash: '%insect3',
       },{
-        imageName: 'Forest Snail',
+        imageName: 'Helicopter Flight',
         imageURL: 'images/albumFive/snail1.jpeg',
         imageHash: '%insect4',
       },{
-        imageName: 'Little Spider',
+        imageName: 'Board Fin',
         imageURL: 'images/albumFive/spider1.jpeg',
         imageHash: '%insect5',
       },{
-        imageName: 'Perched Grasshopper',
+        imageName: 'In the Tube',
         imageURL: 'images/albumFive/grasshopper1.jpeg',
         imageHash: '%insect6',
       }
@@ -172,27 +172,27 @@ var albums = [
     hashLocation: '#elephantAlbum',
     albumImages: [
       {
-        imageName: 'Ancient Mud',
+        imageName: 'Torrenting Ocean',
         imageURL: 'images/albumSix/elephant1.jpeg',
         imageHash: '%elephant1',
       },{
-        imageName: 'Bathing Child',
+        imageName: 'Plumetting Wave',
         imageURL: 'images/albumSix/elephant2.jpeg',
         imageHash: '%elephant2',
       },{
-        imageName: 'Night Travelers',
+        imageName: 'Palm Reflection',
         imageURL: 'images/albumSix/elephant3.jpeg',
         imageHash: '%elephant3',
       },{
-        imageName: 'Sunset Walk',
+        imageName: 'Helicopter Flight',
         imageURL: 'images/albumSix/elephant4.jpeg',
         imageHash: '%elephant4',
       },{
-        imageName: 'Mother and Child',
+        imageName: 'Board Fin',
         imageURL: 'images/albumSix/elephant5.jpeg',
         imageHash: '%elephant5',
       },{
-        imageName: 'A New Day',
+        imageName: 'In the Tube',
         imageURL: 'images/albumSix/elephant6.jpeg',
         imageHash: '%elephant6',
       }

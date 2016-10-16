@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,700");
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+body {
+  width: 100%;
+  font-size: 62.5%;
+  font-family: 'Ubuntu', Georgia, sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  color: #6C717E;
+  box-sizing: border-box; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto; }
+
+img {
+  max-width: 100%; }
+
+a {
+  text-decoration: none;
+  color: #6C717E; }
+
+.sideMenu {
+  box-sizing: border-box;
+  width: 0%;
+  float: left;
+  height: 80vw;
+  background: #4C5878;
+  padding-top: 10vw;
+  transition: all .4s; }
+  .sideMenu button {
+    width: 80%;
+    margin: 1vw; }
+
+.pageHeader {
+  background: #024660;
+  color: white;
+  padding: .25rem 0;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  border-bottom: 0.5rem solid #1A0669; }
+
+.allContent {
+  display: inline-block; }
+  .allContent .selectedContent {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 2rem;
+    display: inline-block;
+    float: left; }
+    .allContent .selectedContent::after {
+      clear: both;
+      content: "";
+      display: block; }
+    .allContent .selectedContent a {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      .allContent .selectedContent a:last-child {
+        margin-right: 0; }
+      .allContent .selectedContent a:nth-child(3n) {
+        margin-right: 0; }
+      .allContent .selectedContent a:nth-child(3n+1) {
+        clear: left; }
+    .allContent .selectedContent li {
+      margin-bottom: 1.5rem;
+      border: solid #4C5878 0.1rem; }
+      .allContent .selectedContent li img {
+        border-bottom: solid #4C5878 0.1rem; }
+    .allContent .selectedContent h2 {
+      margin: 0;
+      height: 2.75rem;
+      padding: .5rem;
+      font-size: .75rem; }
+
+footer {
+  background: #024660;
+  padding: 1vw 0;
+  border-top: 0.5rem solid #27586B;
+  clear: both; }
+
+/*# sourceMappingURL=main.css.map */
