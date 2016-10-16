@@ -6,4 +6,16 @@
   font-size: 1rem;
   font-weight: 700;
   border-bottom: .5rem solid $color-secondary-1-1;
+  position: relative;
+
+  button {
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+  }
+
 }
+
+
+
+// SEE CONTENT BOX STYLING FOR IMAGE ONLY HEADER DISPLAY DETAILS

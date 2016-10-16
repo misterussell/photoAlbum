@@ -13,11 +13,8 @@
     }
 
     li {
-      // @include span-columns(4);
-      // @include omega(3n);
       margin-bottom: 1.5rem;
       border: solid $color-primary-3 .1rem;
-
       img {
         border-bottom: solid $color-primary-3 .1rem;
       }
@@ -30,6 +27,33 @@
       font-size: .75rem;
     }
 
+  }
+
+}
+
+.allContent.reduceWidth {
+  width: 85%;
+}
+
+.allContent.imageView {
+  background: $color-secondary-2-1;
+  width: 100%;
+  .pageHeader {
+    border-bottom: 0;
+  }
+
+  .selectedContent {
+
+    li {
+      border: 0;
+      @include clearfix;
+    }
+
+    img {
+      border: solid .5rem $color-secondary-2-0;
+      @include span-columns(8);
+      @include shift(2);
+    }
   }
 
 }

@@ -30,13 +30,24 @@ a {
   box-sizing: border-box;
   width: 0%;
   float: left;
-  height: 80vw;
+  height: 0vw;
   background: #4C5878;
   padding-top: 10vw;
   transition: all .4s; }
   .sideMenu button {
+    width: 0%; }
+
+.sideMenu.showMenu {
+  display: inline-block;
+  width: 15%;
+  height: 80vw;
+  border-right: 0.5rem solid #1A0669;
+  border-bottom: 0.5rem solid #1A0669;
+  transition: all .4s; }
+  .sideMenu.showMenu button {
     width: 80%;
-    margin: 1vw; }
+    margin: 1vw;
+    font-size: .5rem; }
 
 .pageHeader {
   background: #024660;
@@ -45,7 +56,12 @@ a {
   margin: 0;
   font-size: 1rem;
   font-weight: 700;
-  border-bottom: 0.5rem solid #1A0669; }
+  border-bottom: 0.5rem solid #1A0669;
+  position: relative; }
+  .pageHeader button {
+    position: absolute;
+    left: 2rem;
+    top: 2rem; }
 
 .allContent {
   display: inline-block;
@@ -81,6 +97,30 @@ a {
       height: 2.75rem;
       padding: .5rem;
       font-size: .75rem; }
+
+.allContent.reduceWidth {
+  width: 85%; }
+
+.allContent.imageView {
+  background: #024660;
+  width: 100%; }
+  .allContent.imageView .pageHeader {
+    border-bottom: 0; }
+  .allContent.imageView .selectedContent li {
+    border: 0; }
+    .allContent.imageView .selectedContent li::after {
+      clear: both;
+      content: "";
+      display: block; }
+  .allContent.imageView .selectedContent img {
+    border: solid 0.5rem #27586B;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    margin-left: 17.05961%; }
+    .allContent.imageView .selectedContent img:last-child {
+      margin-right: 0; }
 
 footer {
   background: #024660;
