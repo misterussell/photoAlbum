@@ -73,9 +73,14 @@ function renderAlbum(sideMenu, pageHeader, mainContainer, contentBox, album) {
 
 }
 
-function renderImage(pageHeader, contentBox) {
+function renderImage(pageHeader, contentBox, photo) {
   pageHeader.text('Photo');
+
+  //PRINT new title
+  var selectedPhotoTitle = $('<h1>Album: ' + capFirst(selectedAlbum) + '</h1>');
+
   console.log('hello');
+
   $('body').css('background', '#6B949E');
 }
 
@@ -84,14 +89,14 @@ $a.on('click', function(e){
 });
 
 // CAPTURES albumname from hash location
-// var album = windowLocation.slice(1);
-// var album = windowLocation.slice(1);
+var album = windowLocation.slice(1);
+
 //PROOF of page renderings
 // renderHome(pageHeader, contentBox);
 // renderAlbum(sideMenu, pageHeader, mainContainer, contentBox, album);
-// renderImage(pageHeader, contentBox);
+// renderImage(pageHeader, contentBox, );
 
-// SET default page view
+// SET default page view + watch new traffic with specific hash to render that content
 if (windowLocation === '') {
     renderHome(pageHeader, contentBox);
 } else if (windowLocation.indexOf('%') === -1) {
@@ -99,6 +104,7 @@ if (windowLocation === '') {
   renderAlbum(sideMenu, pageHeader, mainContainer, contentBox, album);
 }
 
+//watch location hash for changes and render new content
 $window.on('hashchange', function(e){
   alert('help!');
   console.log('changed');
@@ -107,10 +113,5 @@ $window.on('hashchange', function(e){
   if(album.indexOf('%') === -1) {
     console.log('test');
     renderAlbum(sideMenu, pageHeader, mainContainer, contentBox, album);
-
   }
-// } else {
-//   console.log('fail');
-// }
-
 });
