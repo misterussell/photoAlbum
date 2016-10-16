@@ -98,23 +98,39 @@ function renderImage(pageHeader, contentBox, currentLocation) {
   var selectedImage = '%' + location.split('%')[1];
   console.log(selectedImage);
 
-  //PRINT new title
-  var selectedAlbumTitle = $('<h1>Album: ' + capFirst(selectedAlbum) + '</h1>');
-
-  //INSERT title into header
-  pageHeader.append(selectedAlbumTitle);
-
   //RETRIEVE a specific album
   function getAlbum(album, i, arr) {
     return album.albumName === selectedAlbum;
   }
 
+  //RETRIEVE a specific image
+  function getImage(image, i, arr) {
+    return image.imageHash === selectedImage;
+  }
+
   var selectAlbum = albums.filter(getAlbum);
-  // console.log(selectAlbum); // PROOF
-  // console.log(selectAlbum[0].albumImages); // PROOF only one object, cannot access with forEach
+  //console.log(selectAlbum); // PROOF
+  //console.log(selectAlbum[0].albumImages); // PROOF only one object, cannot access with forEach
 
   var allImages = selectAlbum[0].albumImages;
-  // console.log(allImages); PROOF to find images
+  //PROOF to find images
+  //console.log(allImages);
+
+  var showImage = allImages.filter(getImage)[0];
+  //PROOF image found
+  console.log(showImage);
+
+  console.log(showImage.imageName);
+
+  //PRINT new title
+  var selectedImageTitle = $('<h1>' + showImage.imageName + '</h1>');
+
+  //INSERT title into header
+  pageHeader.append(selectedImageTitle);
+
+  var $insertImage = $('<li><img src="' + showImage.imageURL + '" /img>');
+
+  contentBox.append($insertImage);
 
   $('body').css('background', '#6B949E');
 }
