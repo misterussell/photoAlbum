@@ -117,6 +117,7 @@ function renderImage(pageHeader, contentBox, currentLocation, sideMenu, mainCont
   var $insertImage = $('<li><img src="' + showImage.imageURL + '" /img>');
   contentBox.append($insertImage);
 
+
   //SIDEMENU handler
   sideMenu.removeClass('showMenu');
   mainContainer.removeClass('reduceWidth');
