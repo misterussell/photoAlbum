@@ -16,10 +16,11 @@ function capFirst(string) {
 }
 
 //RENDER home page content + add hash location to all album previews
-function renderHome(pageHeader, contentBox) {
+function renderHome(pageHeader, contentBox, sideMenu, mainContainer) {
   //CLEAR contents for new data
   pageHeader.empty();
   contentBox.empty();
+  sideMenu.empty();
   //CHANGE the header text
   pageHeader.append('<h1>My Albums</h1>');
   //CREATE a list item + add pictures to the list
@@ -27,6 +28,9 @@ function renderHome(pageHeader, contentBox) {
     var $gridItem = $('<a href="#' + album.albumName + '"><li class="' + album.albumName + '"><img src="' + album.previewImage + '" /img><h2>' + album.albumDescription + '</h2></li></a>');
     contentBox.append($gridItem);
   });
+
+  sideMenu.removeClass('showMenu');
+  mainContainer.removeClass('reduceWidth');
 }
 
 //RENDER album page content for the passed in album info
@@ -141,7 +145,7 @@ $a.on('click', function(e){
 
 //SET default page view + watch new traffic with specific hash to render that content
 if (windowLocation === '' || windowLocation === '#') {
-    renderHome(pageHeader, contentBox);
+    renderHome(pageHeader, contentBox, sideMenu, mainContainer);
 } else if (windowLocation.indexOf('%') === -1) {
   var album = windowLocation.slice(1);
   renderAlbum(sideMenu, pageHeader, mainContainer, contentBox, album);
@@ -155,7 +159,7 @@ $window.on('hashchange', function(e){
   var album = e.target.location.hash.slice(1);
   // console.log(album);
   if (album === '') {
-    renderHome(pageHeader, contentBox);
+    renderHome(pageHeader, contentBox, sideMenu, mainContainer);
   } else if (album.indexOf('%') === -1) {
     renderAlbum(sideMenu, pageHeader, mainContainer, contentBox, album);
   } else if (album.indexOf('%') !== -1) {

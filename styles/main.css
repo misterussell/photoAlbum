@@ -61,7 +61,7 @@ button {
   .sideMenu.showMenu button {
     width: 80%;
     margin: 1vw;
-    font-size: 1rem; }
+    font-size: .5rem; }
 
 .pageHeader {
   background: #024660;
@@ -75,19 +75,7 @@ button {
   .pageHeader button {
     position: absolute;
     left: 2rem;
-    top: 2rem;
-    border-radius: .5rem;
-    border-top: 0;
-    border-right: .2rem;
-    border-bottom: .2rem;
-    border-left: 0;
-    border-style: solid;
-    border-color: #052067;
-    background: #27586B;
-    color: white;
-    font-weight: 400;
-    font-size: 1rem;
-    padding: .5rem; }
+    top: 2rem; }
 
 .allContent {
   display: inline-block;
