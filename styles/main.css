@@ -61,7 +61,8 @@ button {
   .sideMenu.showMenu button {
     width: 80%;
     margin: 1vw;
-    font-size: .5rem; }
+    font-size: .5rem;
+    transition: all .4s; }
 
 .pageHeader {
   background: #024660;
@@ -71,7 +72,8 @@ button {
   font-size: 1rem;
   font-weight: 700;
   border-bottom: 0.5rem solid #1A0669;
-  position: relative; }
+  position: relative;
+  transition: all .3s; }
   .pageHeader button {
     position: absolute;
     left: 2rem;
@@ -79,7 +81,8 @@ button {
 
 .allContent {
   display: inline-block;
-  float: left; }
+  float: left;
+  transition: all .3s; }
   .allContent .selectedContent {
     max-width: 1200px;
     margin-left: auto;
@@ -110,14 +113,17 @@ button {
       margin: 0;
       height: 2.75rem;
       padding: .5rem;
-      font-size: .75rem; }
+      font-size: .75rem;
+      transition: all .3s; }
 
 .allContent.reduceWidth {
-  width: 85%; }
+  width: 85%;
+  transition: all .3s; }
 
 .allContent.imageView {
   background: #024660;
-  width: 100%; }
+  width: 100%;
+  transition: all .3s; }
   .allContent.imageView .pageHeader {
     border-bottom: 0; }
   .allContent.imageView .selectedContent li {
