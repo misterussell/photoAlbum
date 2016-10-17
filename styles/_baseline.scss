@@ -22,3 +22,18 @@ a {
   text-decoration: none;
   color: $color-primary-4;
 }
+
+button {
+  border-radius: .5rem;
+  border-top: 0;
+  border-right: .2rem;
+  border-bottom: .2rem;
+  border-left: 0;
+  border-style: solid;
+  border-color: $color-primary-1;
+  background: $color-secondary-2-0;
+  color: $color-header-text;
+  font-weight: 400;
+  font-size: .5rem;
+  padding: .5rem;
+}
